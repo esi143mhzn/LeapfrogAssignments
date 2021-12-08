@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient( 
+        109.6deg, rgb(83, 15, 172) 18.9%, rgb(101, 18, 139) 91.1% );
+    color: lightsalmon;
+    margin: 100px 0 0 100px;
+    font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: turquoise;
+}
+
+table {
+    color: lightseagreen;
+}
+
+a {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+a:hover {
+    color: yellow;
+}
