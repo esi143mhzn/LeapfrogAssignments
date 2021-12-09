@@ -8,7 +8,9 @@ body{
 h1 {
     font-family: 'Courier New', Courier, monospace;
     color: blueviolet;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    width: 50%;
+    font-size: 30px;
 }
 
 .profile {
