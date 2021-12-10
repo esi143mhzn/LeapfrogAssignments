@@ -1,0 +1,74 @@
+* {
+    margin:0px;
+}
+
+header {
+    background-color: #97dfea;
+    height: 70px;
+    padding: 0px 30px 0px 30px; 
+}
+
+.logo {
+    margin-top: 10px;
+    font-size: 44px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 15%;
+    float: left;
+}
+
+.search {
+    margin: 24px 0px 0px 50px;
+    display: inline-block;  
+}
+
+.search-box {
+    background-color: #d2dfec;
+    width: 300px;
+}
+
+.search-btn {
+    background-color: #017a74;
+    color: #d2dfec;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.profile {
+    width: 20%;
+    float: right;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.profile > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    background-color: #d3d3d354;
+    padding: 10px 0px 10px 35px;
+}
+
+nav > div {
+    display: inline-block;
+}
+
+.menu-bar {    
+    width: 50%;
+}
+
+.menu-bar > div {
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.notification-bar{
+    width: 49%;
+    text-align: right;
+}
+
+.notification-bar > div {
+    padding: 0px 20px 0px 10px;
+    display: inline-block;
+}
