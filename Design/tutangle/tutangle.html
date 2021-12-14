@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+
     <title>Lo-fi TUTANGLE</title>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <p>TuTangle</p>
+               <span>TuTangle</span>
             </div>
             <div class="search">
                 <input name="search" class="search-box" placeholder="Search By Term, Member, or Entry Title">
                 <input type="submit" class="search-btn" name="search" value="Search">
             </div>
             <div class="profile">
-                <h3>Joe Burros</h3>
+                <h4>Joe Burros</h4>
                 <a href="">Home</a> |
                 <a href="">Settings</a> |
                 <a href="">Log Out</a>
@@ -26,16 +33,180 @@
         </header>
         <nav>
             <div class="menu-bar">
-                <div>Create New Entry</div>
-                <div>My Topic Boxes</div>
-                <div>Friends</div>
-                <div>Invite New Member</div>
+                <a href="">Create New Entry</a>
+                <a href="">My Topic Boxes</a>
+                <a href="">Friends</a>
+                <a href="">Invite New Member</a>
             </div>
             <div class="notification-bar">
-                <div>Topic Boxes Invites - 2</div>
-                <div>Friend Request - 0</div>
+                <a href="" class="topic-boxes">
+                    <span><img src="images/topic-boxes.png" alt="topic boxes"></span>
+                    <span>Topic Boxes Invites - 2</span>
+                </a href="">
+                <a href="" class="friend-request">
+                    <span><img src="" alt=""></span>
+                    <span> Friend Request - 0</span>
+                </a href="">
             </div>
         </nav>
+        
+        <div class="left-sidebar">
+            <div class="heading">Recent Searches</div>
+            <div class="search-items">
+                    <ul>
+                        <li class="search-items-list"><a href="">Nick Cave and the Bad Seeds</a></li>
+                        <li class="search-items-list"><a href="">African Animals</a></li>
+                    </ul>
+            </div>
+            <div class="heading">Recent Searches</div>
+            <div class="search-items">
+                <ul>
+                    <li class="search-items-list"><a href="">Different version of the Tristan Und Isolde Prelude</a></li>
+                    <li class="search-items-list active"><a href="">Music</a></li>
+                    <li class="search-items-list"><a href="">Guitar</a></li>
+                    <li class="search-items-list"><a href="">Bob Cohen</a></li>
+                    <li class="search-items-list"><a href="">Mark Schnack</a></li>
+                    <li class="search-items-list"><a href="">Jefferson Dickey</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-heading">Entries</div>
+            <div class="top-head">
+                <div class="left-content">
+                    <div class="all">All Entries</div>
+                    <div class="all-list">
+                        <div class="slice-image">
+                            <img src="images/Slice 6.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            <div><a href="">All Members</a></div>
+                        </div>
+                        <div class="slice-image">
+                            <img src="images/Slice 7.png" alt="">
+                        </div>
+                    </div>
+                    <div class="all-list">
+                        <div class="slice-image">
+                            <img src="images/Slice 8.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            <div><a href="">Friends</a></div>
+                        </div>
+                        <div class="slice-image">
+                            <img src="images/Slice 9.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="friends"><a href="">Friends</a></div> -->
+                </div>
+                <div class="right-content">
+                    <div class="sub">Subscribed</div>
+                    <div class="friends"><a href="">New Entries</a></div>
+                    <div class="friends"><a href="">New Comments</a></div>
+                </div>
+            </div>
+            <hr class="clear">
+            <div class="content-lists">
+                <div class="content-list-items">
+                    <div class="content-image">
+                        <a href="">
+                            <img src="images/Slice 1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <h5>Day for Night by Francois Truffaut, a ground breaking film</h5>
+                        <h6>by <a href="">Alan Coe</a> | February 10, 2012 | <span style="color: #6E951E;">Subscribed</span></h6>
+                        <h6>From Topic Box: <a href="">My Favourite Movies</a></h6>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-list-items">
+                    <div class="content-image">
+                        <a href="">
+                            <img src="images/Slice 2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <h6><a href="">NEW ENTRY!</a></h6>
+                        <h5>Bladder Runner, The Director's Cut</h5>
+                        <h6>by <a href=""> Mary Pilot</a> | February 8, 2012 </h6>
+                        <h6>From Topic Box: <a href=""> Behind the Scene</a></h6>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-list-items">
+                    <div class="content-image">
+                        <a href="">
+                            <img src="images/Slice 3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <h6><a href="">NEW COMMENT!</a></h6>
+                        <h5>The Best French Restaurant in Chicago?</h5>
+                        <h6>by <a href=""> Jim Roy | </a>February 7, 2012</h6>
+                        <h6>From Topic Box: <a href=""> Chicago Restaurants Reviews </a></h6>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-list-items">
+                    <div class="content-image">
+                        <a href="">
+                            <img src="images/Slice 4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <h5>The meaning of Night. Dark Book but incredibly well written.</h5>
+                        <h6>by <a href=""> John-Peter</a> Moise | February 7, 2012 | <span style="color: #6E951E;">Subscribed</span></h6>
+                        <h6>From Topic Box: <a href=""> Books Read & Books to Read</a></h6>
+                    </div>
+                </div>
+                <hr>
+                <div class="content-list-items">
+                    <div class="content-image">
+                        <a href="">
+                            <img src="images/Slice 5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="desc">
+                        <h6 style="color: #D63D1B; font-weight:900;">TOPIC BOX INVITE!</h6>
+                        <h5>Pea Pesto</h5>
+                        <h6>by <a href=""> Marianne G</a>ig | February 6, 2012</h6>
+                        <h6>From Topic Box: <a href=""> Favourite Recipes</a></h6>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="heading">Video Content</div>
+            <div class="search-items">
+                <ul>
+                    <li class="search-items-list"><a href="">Overview of TuTangle</a></li>
+                    <li class="search-items-list active"><a href="">Searching the Site</a></li>
+                    <li class="search-items-list"><a href="">Previous & Saved Searches</a></li>
+                    <li class="search-items-list"><a href="">The Topic Box Page</a></li>
+                    <li class="search-items-list"><a href="">Creating a Top Box</a></li>
+                    <li class="search-items-list"><a href="">View Topic Box Entries</a></li>
+                    <li class="search-items-list"><a href="">Creating an Entry</a></li>
+                    <li class="search-items-list"><a href="">Privacy Settings</a></li>
+                    <li class="search-items-list"><a href="">Co-Authoring</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="quick-links">
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Podivcy</a>
+                <a href="">Feedback</a>
+            </div>
+            <div class="copyright">
+                &copy; TuTangle 2013
+            </div>
+        </footer>
     </div>
 </body>
 </html>
