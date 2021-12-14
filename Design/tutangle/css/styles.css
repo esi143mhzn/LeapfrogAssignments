@@ -1,0 +1,146 @@
+header {
+    background-color: #97dfea;
+}
+
+.logo {
+    font-size: 47px;
+}
+
+.search-box {
+    background-color: #CAEFF7;
+}
+
+.search-btn {
+    background-color: #017a74;
+    color: #d2dfec;
+    text-transform: uppercase;
+}
+
+.profile {
+    text-align: right;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+nav {
+    background-color: #F5F5F5;
+}
+
+.notification-bar{
+    text-align: right;
+}
+
+.heading{
+    background-color: #2FC1DA;
+    color: #F3FCFB;
+    font-size: 16px;
+    height: 41px;
+    padding: 14px 0px 13px 0px;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-items-list a{
+    display: block;
+    padding: 12px 14px;
+}
+
+.search-items-list a:hover{
+    background-color: #FFF;
+}
+
+.active a{
+    background-color: #FFF;
+}
+
+.left-content{
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.all{
+    font-size: 12px;
+    font-weight: 600;
+}   
+
+.desc{
+    line-height: 1.5;
+}
+
+.desc a{
+    color: #2FC1DA !important;
+    font-weight:bolder !important;
+}
+
+.sub{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.all-list{
+    margin-top: 6px;
+}
+
+.item-name{
+    /* background-color: #2FC1DA; */
+    padding: 6px 12px 6px 12px;
+}
+
+.slice-image{
+    float: left;
+}
+
+.item-name a{
+    background-color: #2FC1DA;
+    color: white;
+}
+
+.friends{
+    width: 30%;
+    margin-right: 25px;
+    background-color: #E5E5E5;
+    padding: 6px 12px 6px 12px;
+}
+
+.content-heading{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.clear{
+    border-top: 3px solid #2fc1da;
+}
+
+.right-content{
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+footer{
+    background-color: #727272;
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.quick-links a{
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+
+
+
+
