@@ -1,23 +1,45 @@
 body{
-    background: linear-gradient( 
-        109.6deg, rgb(83, 15, 172) 18.9%, rgb(101, 18, 139) 91.1% );
-    color: lightsalmon;
+    background-color: powderblue;
     margin: 100px 0 0 100px;
-    font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: Brush Script MT, Lucida ;
+    text-transform: uppercase;
 }
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
-    color: turquoise;
+    color: blueviolet;
+    text-transform: capitalize;
+    width: 50%;
+    font-size: 30px;
+}
+
+.profile {
+    width: 50%;
+}
+
+.user-info {
+    float: left;
+}
+
+.pro-pic {
+    float: right;
 }
 
 table {
-    color: lightseagreen;
+    color: darkgreen;
+    text-transform: capitalize;
+    width: 50%;
+    text-align: center;
+}
+
+table th {
+    color:limegreen;
+    font-size: 18px;
 }
 
 a {
     text-decoration: none;
-    color: yellowgreen;
+    color: darkgreen
 }
 
 a:hover {
