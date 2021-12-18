@@ -44,10 +44,10 @@
     /* display: none; */
 }
 
-.hero-img{
+.hero-image{
     width: 105%;
     margin-left: -1.7rem;
-    padding-top: 4rem !important;
+    padding-top: 4rem;
 }
 
 .tagline{
@@ -350,3 +350,209 @@ footer.h5{
     color: #5E6282;
     font-size: 0.5rem !important;
 }
+
+
+@media screen and (min-width:768px) {
+    .menu-bar{
+        display: none;
+    }
+
+    .bg-holder{
+        top: -0.2rem;
+    }
+
+    .hero-image{
+        float: right !important;
+        width: 51.6667%;
+        margin-left: 0;
+        padding-top: 5rem;
+        margin-right: -2rem;
+    }
+
+    .hero-description{
+        padding-top: 5rem !important;
+        text-align: left;
+    }
+
+    .tagline{
+        font-size: 1.35rem;
+    }
+    
+    .hero-title::before {
+        right: 20.9375rem;
+        top: 2.8rem;
+        width: 19rem;
+        height: 0.9125rem;
+    }
+
+    .desc{
+        font-size: 1.2rem;
+        margin-bottom: 0rem;
+    }
+
+    .cta{
+        width: 30%;
+        float: left;
+    }
+
+    .cta img{
+        margin-left: -1.8rem;
+    }
+
+    .play-button{
+        float: left;
+        margin-left: -4rem;
+    }
+
+    .card{
+        width: 50%;
+        float: left;
+    }
+
+    .services{
+        padding-bottom: 30rem;
+    }
+
+    .destinations{
+        padding-bottom: 25rem;
+    }
+
+    .wrapper > .card{
+        width: 33%;
+        float: left;
+        clear: none;
+        padding-right: 1.8rem;
+    }
+
+    .top-footer > .mb-4{
+        width: 50%;
+        float: left;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    .logo{
+        float: left;
+        width: 25%;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-bar{
+        font-weight: bold;
+        display: block;
+        margin: 0.6rem auto;
+        float: right;
+    }
+
+    .menu-bar ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu-bar ul li{
+        width: auto;
+        float: left;
+        padding: 0px 1rem;
+    }
+    .menu-bar ul li a{
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: black;
+    }
+
+    .btn-outline-dark {
+        border-color: #212832;
+        border: 1px solid #212832;
+        border-radius: 0.2rem;
+        padding: 0.3rem;
+    }
+
+    .bg-holder{
+        top: -0.2rem;
+    }
+
+    .hero-image{
+        float: right !important;
+        width: 52.6667%;
+        margin-left: 0;
+        padding-top: 0rem;
+        margin-right: 0rem;
+    }
+
+    .hero-title::before {
+        right: 32.9375rem;
+        top: 3.1rem;
+    }
+
+    .desc{
+        font-size: 1.05rem;
+    }
+    
+    .hero-content{
+        padding-bottom: 15rem !important;
+    }
+
+    .section-desc{
+        font-size: 3rem !important;
+    }
+
+    .card{
+        width: 25%;
+        float: left;
+        overflow: auto;
+    }
+
+    .services{
+        padding-bottom: 25rem;
+    }
+
+    .booking{
+        padding-bottom: 35rem;
+    }
+
+    .top{
+        width: 45%;
+        float: left;
+    }
+
+    .section-desc{
+        font-size: 2.8rem !important;
+    }
+
+    .bottom > .card{
+        width: 50%;
+        border: none;
+        text-align: center;
+        border-radius: 2.25rem !important;
+        position: relative;
+        background-color: #f8f3f3;
+        background-clip: border-box;
+    }
+
+    .testimonial > .container > div {
+        width: 50%;
+        float: left;
+    }
+
+    .partners > .container >.card {
+        max-width: 60rem;
+        width: 100%;
+    }
+
+    .partners > .container >.card > .card-body {
+        width: 20%;
+        float: left;
+    }
+
+    .top-footer > .mb-4{
+        width: 20%;
+        float: left;
+    }
+
+}
+
+
