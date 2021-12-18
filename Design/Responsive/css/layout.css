@@ -105,3 +105,10 @@
         max-width: 60rem;
     }   
 }
+
+@media screen and (min-width:1366px) {
+    .container{
+        max-width: 80rem;
+    }   
+}
+
