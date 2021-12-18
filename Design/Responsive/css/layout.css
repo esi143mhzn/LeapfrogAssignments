@@ -1,0 +1,94 @@
+.whole-wrapper{
+    width: 100%;
+    display: block;
+}
+
+.navbar{
+    /* padding-top: 0.5rem; */
+    padding-right: 1rem;
+    /* padding-bottom: 0.5rem; */
+    padding-left: 1rem;
+}
+
+.container{
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+}
+
+.logo{
+    padding-top: 0.18213rem;
+    padding-bottom: 0.18213rem;
+    margin-right: 1rem;
+    font-size: calc(1.26738rem + .20859vw); 
+}
+
+.bg-holder{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    will-change: transform, opacity, filter;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-content{
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+.ms-n4 {
+    margin-left: -1.8rem !important;
+}
+
+.mt-3 {
+    margin-top: -1rem !important;
+}
+
+.start-100 {
+    left: 90% !important;
+}
+
+.top-0 {
+    top: 0 !important;
+}
+.position-absolute {
+    position: absolute !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.py-8 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+.px-5 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
+}
+
+.lh-1-7 {
+    line-height: 1.7 !important;
+}
+
+.mb-7 {
+    margin-bottom: 4rem !important;
+}
