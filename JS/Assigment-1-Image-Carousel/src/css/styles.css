@@ -2,23 +2,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  .carousel-image-wrapper {
-    height: 150px;
+}
+
+.carousel-container {
+    width: 600px;
+    height: 300px;
     position: relative;
-    /* transition: 500ms; */
-  }
-
-  #wrapper {
-    margin: 20px;
-    width: 200px;
+    margin: 0 auto;
     overflow: hidden;
-  }
+}
 
-  img {
+.carousel-image-wrapper {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.button-wrapper {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+
+img {
     position: absolute;
-    width: 200px;
-    height: 150px;
-    border: 1px solid #ccc;
+    width: 600px;
+    height: 300px;
     top: 0px;
-  }
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dots li {
+    cursor: pointer;
+    display:inline-block;
+    background:grey;
+    padding:8px;
+    border-radius:50%;
+    margin:0 3px;
+    line-height: .5;
+}
+
+.dots li.active{
+    opacity: 1;
+    background:crimson;
+}
+
+#next {
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    z-index: 99;
+    cursor: pointer;
+    color: #fff;
+    right:0;
+    top: -340px;
+    background: transparent;
+    border: none;
+}
+#next:hover{
+    background: rgba(0, 0, 0, 0.25)
+}
+#next:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    font-size: 50px;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    margin-right: 10px;
+    transition: .5s;
+}
+
+#prev {
+    position: relative;
+    height: 100%;
+    width: 60px;
+    z-index: 99;
+    cursor: pointer;
+    color: #fff;
+    transition: 1s;
+    top: -340px;
+    background: transparent;
+    border: none;
+}
+
+#prev:hover{
+    background: rgba(0, 0, 0, 0.25)
+}
+
+#prev:before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f104";
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin-left: 10px;
+    transition: .5s;
+}
