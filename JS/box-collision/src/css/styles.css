@@ -1,0 +1,14 @@
+body {
+    background-color: bisque;
+  }
+  .main-area {
+    margin: 30px auto;
+    background-color: aliceblue;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box {
+    border-radius: 50%;
+    position: absolute;
+  }
