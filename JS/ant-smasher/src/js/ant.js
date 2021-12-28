@@ -1,20 +1,11 @@
+let body = document.querySelector("body");
 let mainArea = document.querySelector(".main-area");
     mainArea.style.height = 650 + "px";
     mainArea.style.width = 650 + "px";
-let colors = [
-  "#99d8d0",
-  "#ffa931",
-  "#b9ac92",
-  "#e79cc2",
-  "#99b898",
-  "#5a3d55",
-  "#84a9ac",
-];
-let min = 0;
-let max = colors.length;
+
+let counter = 0; //smasher counter
 let directionValue = [-1, 1]; //directions
-let movement = [3, 3]; //speed
-let hw = [20, 25, 30, 35]; //heightwidth array for the circles
+let movement = [2, 2]; //speed
 let circles = [];
 
 function ball() {
@@ -22,18 +13,31 @@ function ball() {
   this.create = function () {
     this.divSmall = document.createElement("div");
     this.divSmall.setAttribute("class", "box");
-    this.heightWidth = hw[Math.floor(Math.random() * hw.length)];
+
+    this.heightWidth = 30;
 
     this.divSmall.style.height = this.heightWidth + "px";
     this.divSmall.style.width = this.heightWidth + "px";
     this.ballRadius = parseInt(this.heightWidth / 2);
-
     this.divSmall.style.top = Math.floor(Math.random() * 625) + "px";
     this.divSmall.style.left = Math.floor(Math.random() * 625) + "px";
-    this.index = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(this.index)
-    this.divSmall.style.backgroundColor = colors[this.index];
+
     mainArea.appendChild(this.divSmall);
+
+    this.img = document.createElement("img");
+    this.img.setAttribute("class", "ant-images");
+    this.img.setAttribute("src", "src/image/ant.png");
+
+    this.divSmall.appendChild(this.img);
+
+    this.divSmall.addEventListener("click", function () {
+      counter++;
+      self.divSmall.removeChild(self.img);
+      mainArea.removeChild(self.divSmall);
+      if (counter === 20) {
+        alert("YOU WON!!!");
+      }
+    });
 
     this.dx = directionValue[Math.floor(Math.random() * directionValue.length)];
     this.dy = directionValue[Math.floor(Math.random() * directionValue.length)];
@@ -46,10 +50,12 @@ function ball() {
     circles.push(this.divSmall);
   };
 
+  //   this.touching = function (circle) {};
+
   this.move = function () {
     //border collision detection
     if (
-      self.x + self.dx * self.speedX > 650 - self.ballRadius ||
+      self.x + self.dx * self.speedX > 645 - self.ballRadius ||
       self.x + self.dx * self.speedX < self.ballRadius
     ) {
       self.dx = -self.dx;
@@ -97,6 +103,7 @@ function ball() {
         self.divSmall.style.left = self.x + "px";
       }
     }
+    body.querySelector(".count").querySelector("span").innerText = counter;
   };
 }
 
