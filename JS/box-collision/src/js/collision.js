@@ -1,7 +1,7 @@
-mainArea = document.querySelector(".main-area");
-mainArea.style.height = 650 + "px";
-mainArea.style.width = 650 + "px";
-colors = [
+let mainArea = document.querySelector(".main-area");
+    mainArea.style.height = 650 + "px";
+    mainArea.style.width = 650 + "px";
+let colors = [
   "#99d8d0",
   "#ffa931",
   "#b9ac92",
@@ -10,15 +10,15 @@ colors = [
   "#5a3d55",
   "#84a9ac",
 ];
-var min = 0;
-var max = colors.length;
-var directionValue = [-1, 1]; //directions
-var movement = [3, 3]; //speed
-var hw = [20, 25, 30, 35]; //heightwidth array for the circles
+let min = 0;
+let max = colors.length;
+let directionValue = [-1, 1]; //directions
+let movement = [3, 3]; //speed
+let hw = [20, 25, 30, 35]; //heightwidth array for the circles
 let circles = [];
 
 function ball() {
-  var self = this;
+  let self = this;
   this.create = function () {
     this.divSmall = document.createElement("div");
     this.divSmall.setAttribute("class", "box");
@@ -100,8 +100,8 @@ function ball() {
   };
 }
 
-var b = [];
-var ballCount = 20;
+let b = [];
+let ballCount = 20;
 //creating balls
 for (let i = 0; i < ballCount; i++) {
   b[i] = new ball();
