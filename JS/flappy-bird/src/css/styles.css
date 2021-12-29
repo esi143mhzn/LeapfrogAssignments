@@ -1,21 +1,31 @@
 .game-container {
     width: 500px;
-    height: 730px;
+    height: 100vh;
     position: absolute;
 	left: 80px;
 }
 
 .border-left {
 	width: 80px;
-	height: 790px;
+	height: 100vh;
 	position: absolute;
 	background-color: white;
 	z-index: +2;
 }
 
+.rightSection {
+	width: calc(100% - 60px - 850px);
+	height: 100vh;
+	position: absolute;
+	background-color: white;
+	z-index: +1;
+	left: 665px;
+	top: 0px;
+  }
+
 .border-right {
 	width: 80px;
-	height: 790px;
+	height: 100vh;
 	position: absolute;
 	background-color: white;
 	z-index: +2;
@@ -45,7 +55,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 500px;
-	height: 150px;
+	height: 140px;
 	position: absolute;
 	top: 580px;
 	z-index: +1;
@@ -76,3 +86,80 @@
 	transform: rotate(180deg);
 }
 
+.title {
+	margin: 60px 20px 20px;
+	color: #533c44;
+	font-size: 4vw;
+	text-shadow: 2px 2px #dadada;
+	text-align: center;
+	width: 600px;
+}
+  
+.instruction {
+	margin: 0px 20px 0px;
+	text-align: center;
+	width: 600px;
+	font-size: 25px;
+}
+
+.my-score {
+	font-size: 22px;
+	margin-top: 1%;
+	color: #533c44;
+}
+  
+.scoreboard {
+	position: relative;
+	max-width: 450px;
+	margin: 20px 20px 20px 80px;
+	padding: 20px;
+	background-color: #ded895;
+}
+
+.scoreboard:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	display: block;
+	width: calc(100% - 20px);
+	height: calc(100% - 4px);
+	border-top: 2px solid #b1878f;
+	border-bottom: 2px solid #b1878f;
+	z-index: 1;
+}
+  
+.scoreboard:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	display: block;
+	width: calc(100% - 4px);
+	height: calc(100% - 20px);
+	border-left: 2px solid #b1878f;
+	border-right: 2px solid #b1878f;
+	z-index: 1;
+}
+
+.score-title {
+	margin: 0 0 0;
+	font-family: "VT323", monospace;
+	font-size: 3em;
+	text-align: center;
+	color: #ee5140;
+	text-shadow: 2px 2px #f0eaa1;
+}
+  
+.top-score {
+	text-align: center;
+	font-size: 48px;
+	color: #533c44;
+	position: relative;
+    height: 100px;
+    max-height: 250px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    z-index: 2;
+}
