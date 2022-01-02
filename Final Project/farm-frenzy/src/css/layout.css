@@ -1,0 +1,14 @@
+body {
+	background-color:black;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+
+canvas {
+	width: 100%;
+	background:transparent;
+	position:absolute;
+	left:100px; /*if change , change the well hover */
+	top:20px;
+}
