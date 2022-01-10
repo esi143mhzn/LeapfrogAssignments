@@ -15,7 +15,7 @@ class FarmFrenzy {
         let imgDuckLeft;
         let menuList;
         let newGame;
-        let howToPlay;
+        this.howToPlay;
 
         this.homeWidth = 1100;
         this.homeHeight = 600;
@@ -78,8 +78,9 @@ class FarmFrenzy {
         newGame.innerHTML = "New Game";
         menuList.append(newGame); 
 
-        howToPlay = document.createElement("li");
-        howToPlay.innerHTML = "How To Play";
-        menuList.append(howToPlay);
+        this.howToPlay = document.createElement("li");
+        this.howToPlay.setAttribute("id", "how-to-play");
+        this.howToPlay.innerHTML = "How To Play";
+        menuList.append(this.howToPlay);
     } 
 }

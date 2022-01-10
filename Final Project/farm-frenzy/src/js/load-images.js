@@ -21,12 +21,12 @@ class LoadImage{
             duckfront1: null,
             duckfront2: null,
             duckfront3: null,
-            duckfronleft1: null,
-            duckfronleft2: null,
-            duckfronleft3: null,
-            duckfronright1: null,
-            duckfronright2: null,
-            duckfronright3: null,
+            duckfrontleft1: null,
+            duckfrontleft2: null,
+            duckfrontleft3: null,
+            duckfrontright1: null,
+            duckfrontright2: null,
+            duckfrontright3: null,
 
             duckleft1: null,
             duckleft2: null,
@@ -76,4 +76,3 @@ class LoadImage{
 }
 
 let images = new LoadImage()
-console.log(images)

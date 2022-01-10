@@ -41,17 +41,17 @@ mainWrapper.appendChild(storageImage);
 // mainWrapper.appendChild(vehicleImage);
 
 const bucketEmpty = document.createElement("img");
-bucketEmpty.setAttribute("src", "src/images/bucket-well/bucketEmpty.png");
+bucketEmpty.setAttribute("src", "src/images/bucketEmpty.png");
 bucketEmpty.style.display = "none";
 mainWrapper.appendChild(bucketEmpty);
 
 const well1 = document.createElement("img");
-well1.setAttribute("src", "src/images/bucket-well/well1.png");
+well1.setAttribute("src", "src/images/well1.png");
 well1.style.display = "none";
 mainWrapper.appendChild(well1);
 
 const bucketFull = document.createElement("img");
-bucketFull.setAttribute("src", "src/images/bucket-well/bucketFull.png");
+bucketFull.setAttribute("src", "src/images/bucketFull.png");
 bucketFull.style.display = "none";
 mainWrapper.appendChild(bucketFull);
 
