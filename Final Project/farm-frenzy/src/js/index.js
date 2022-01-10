@@ -1,18 +1,59 @@
 const canvas = document.getElementById("game-screen");
+canvas.style.display = "none"
+
 
 const ctx = canvas.getContext("2d");
 
 const GAME_WIDTH = 1100;
 const GAME_HEIGHT = 600;
 
-let duck = new Duck(GAME_WIDTH, GAME_HEIGHT);
+let duck = new Duck();
 
 let grasses = [];
 let eggs = [];
 let lastTime = 0;
 let grassCount = 0;
 
-// const mainWrapper = document.querySelector(".main-wrapper");
+const mainWrapper = document.querySelector(".game-wrapper");
+const backgroundImage = document.createElement("img");
+backgroundImage.setAttribute("src", "src/images/background.png");
+backgroundImage.style.display = "none";
+mainWrapper.appendChild(backgroundImage);
+
+const groundImage = document.createElement("img");
+groundImage.setAttribute("src", "src/images/main.png");
+groundImage.style.display = "none";
+mainWrapper.appendChild(groundImage);
+
+const storageImage = document.createElement("img");
+storageImage.setAttribute("src", "src/images/shed.png");
+storageImage.style.display = "none";
+mainWrapper.appendChild(storageImage);
+
+// const eggImage = document.createElement("img");
+// eggImage.setAttribute("src", "src/images/eggs/egg1.png");
+// eggImage.style.display = "none";
+// mainWrapper.appendChild(eggImage);
+
+// const vehicleImage = document.createElement("img");
+// vehicleImage.setAttribute("src", "src/images/van/van1.png");
+// vehicleImage.style.display = "none";
+// mainWrapper.appendChild(vehicleImage);
+
+const bucketEmpty = document.createElement("img");
+bucketEmpty.setAttribute("src", "src/images/bucket-well/bucketEmpty.png");
+bucketEmpty.style.display = "none";
+mainWrapper.appendChild(bucketEmpty);
+
+const well1 = document.createElement("img");
+well1.setAttribute("src", "src/images/bucket-well/well1.png");
+well1.style.display = "none";
+mainWrapper.appendChild(well1);
+
+const bucketFull = document.createElement("img");
+bucketFull.setAttribute("src", "src/images/bucket-well/bucketFull.png");
+bucketFull.style.display = "none";
+mainWrapper.appendChild(bucketFull);
 
 // const money = document.createElement("div");
 
@@ -38,8 +79,10 @@ function gameloop(timeStamp) {
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
   // Draw ground area
-  ctx.fillStyle = "#c29b25";
-  ctx.fillRect(0, 0, 855, 405);
+  // ctx.fillStyle = "#c29b25";
+  // ctx.fillRect(0, 0, 855, 405);
+  ctx.drawImage(backgroundImage,0,0,GAME_WIDTH, GAME_HEIGHT);
+  ctx.drawImage(groundImage, 0, 100, GAME_WIDTH - 250, GAME_HEIGHT - 240);
 
   // Draw objects
   well.draw();

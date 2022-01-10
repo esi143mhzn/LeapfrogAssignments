@@ -4,18 +4,18 @@ class Vehicle {
       (this.vehicleHeight = 150),
       (this.vehicleColor = "red"),
       (this.vehicleX = 455),
-      (this.vehicleY = 420),
+      (this.vehicleY = 455),
       (this.vehicleSpeedX = 10),
       (this.move = 0);
       this.vechicleEggs=0
   }
 
   draw() {
-    if (this.move == 1) {
+    if (this.move == 1 && this.vechicleEggs > 0) {
       this.update();
     }
-    ctx.fillStyle = this.vehicleColor;
-    ctx.fillRect(
+    // ctx.fillStyle = this.vehicleColor;
+    images.draw("van1",
       this.vehicleX,
       this.vehicleY,
       this.vehicleWidth,
@@ -25,7 +25,7 @@ class Vehicle {
 
   update() {
     this.vehicleX += this.vehicleSpeedX;
-    if (this.vehicleX > 1100) {
+    if (this.vehicleX > 1200) {
       this.vehicleSpeedX = -this.vehicleSpeedX;
     }
     if (this.vehicleX < 465 && this.move == 1) {

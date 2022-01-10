@@ -1,9 +1,6 @@
 class LoadImage{
-    constructor() {
-        this.images = null;
-    }
 
-    init() {
+    constructor() {
         this.images = {
             background: null,
             main: null,
@@ -67,11 +64,16 @@ class LoadImage{
             img.src = 'src/images/' + i + '.png';
             this.images[i] = img;
 
-            con
         }
     }
 
     getImage(name) {
         return this.images[name];
     }
+    draw( name, posx, posy, width, height ) {
+        ctx.drawImage( this.images[name], posx, posy, width, height );
+      }
 }
+
+let images = new LoadImage()
+console.log(images)

@@ -8,7 +8,7 @@ class FarmFrenzy {
     //Home Screen Initialization
     constructor() {
         
-        let mainWrapper;
+        this.mainWrapper;
         let homeSceneMenu;
         let FarmFrenzy;
         let imgDuckRight;
@@ -22,7 +22,7 @@ class FarmFrenzy {
         this.imgWidth = 80;
         this.imgHeight = 80;
 
-        mainWrapper = document.querySelector(".main-wrapper");
+        this.mainWrapper = document.querySelector(".main-wrapper");
         
         //create div element for home screen
         homeSceneMenu = document.createElement("div");
@@ -32,8 +32,8 @@ class FarmFrenzy {
         homeSceneMenu.style.top = 20 + "px";
         homeSceneMenu.style.left = 100 + "px";
         homeSceneMenu.style.position = "absolute";
-        homeSceneMenu.style.backgroundImage = "url('src/images/background.jpg')";
-        mainWrapper.appendChild(homeSceneMenu);
+        homeSceneMenu.style.backgroundImage = "url('src/images/background.png')";
+        this.mainWrapper.appendChild(homeSceneMenu);
 
         //create h1 element for heading
         FarmFrenzy = document.createElement("h1");
@@ -51,7 +51,7 @@ class FarmFrenzy {
 
         //create img element for duck image 
         imgDuckRight = document.createElement("img");
-        imgDuckRight.setAttribute("src", "src/images/duck/duckright1.png")
+        imgDuckRight.setAttribute("src", "src/images/duckright1.png")
         imgDuckRight.style.width = this.imgWidth + "px";
         imgDuckRight.style.height = this.imgHeight + "px";
         imgDuckRight.style.position = "absolute";
@@ -60,7 +60,7 @@ class FarmFrenzy {
         homeSceneMenu.appendChild(imgDuckRight);
 
         imgDuckLeft = document.createElement("img");
-        imgDuckLeft.setAttribute("src", "src/images/duck/duckleft1.png");
+        imgDuckLeft.setAttribute("src", "src/images/duckleft1.png");
         imgDuckLeft.style.width = this.imgWidth + "px";
         imgDuckLeft.style.height = this.imgHeight + "px";
         imgDuckLeft.style.position = "absolute";
@@ -82,5 +82,4 @@ class FarmFrenzy {
         howToPlay.innerHTML = "How To Play";
         menuList.append(howToPlay);
     } 
-
 }

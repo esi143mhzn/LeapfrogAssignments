@@ -1,7 +1,7 @@
 class Duck {
-  constructor(gameWidth, gameHeight) {
-    this.gameWidth = gameWidth;
-    this.gameHeight = gameHeight;
+  constructor() {
+    this.gameWidth = 850;
+    this.gameHeight = 360;
 
     (this.duckWidth = 50),
       (this.duckHeight = 50),
@@ -21,7 +21,7 @@ class Duck {
 
   draw() {
     ctx.fillStyle = this.color;
-    ctx.fillRect(
+    images.draw("duckleft1",
       this.position.x,
       this.position.y,
       this.duckWidth,
