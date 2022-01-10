@@ -83,15 +83,4 @@ class FarmFrenzy {
         menuList.append(howToPlay);
     } 
 
-    startGame() {
-        document.getElementById("new-game").onclick = function() {
-            console.log("I m Clicked bro")
-            // this.homeSceneMenu.style.display = "none";
-        
-        }
-    }
-
 }
-
-let farmfrenzy = new FarmFrenzy();
-farmfrenzy.startGame();
