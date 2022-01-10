@@ -16,8 +16,9 @@ class Well {
       images.draw("well1", this.x, this.y, 300, 300);
       images.draw("bucketEmpty", this.x + 90, this.y + 150, 100, 150);
     } else {
-      ctx.fillStyle = "lightblue";
-      images.draw("bucketFull", this.x, this.y, 100, 200);
+      ctx.fillStyle = "blue";
+      images.draw("well2", this.x, this.y, 300, 300);
+      images.draw("bucketFull", this.x + 90, this.y + 150, 100, 150);
       ctx.fillRect(
         this.x + 250,
         this.y +100 + (5 - this.waterLevel) * this.waterLevelHeight,
@@ -25,7 +26,8 @@ class Well {
         this.waterLevelHeight * this.waterLevel
         );
         ctx.fillStyle = "grey";
-        images.draw("bucketEmpty", this.x, this.y, 100, 200);
+        images.draw("well1", this.x, this.y, 300, 300);
+        images.draw("bucketFull", this.x + 90, this.y + 150, 100, 150);
       ctx.fillRect( 
         this.x + 250,
         this.y + 100,

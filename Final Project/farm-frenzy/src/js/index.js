@@ -138,7 +138,7 @@ canvas.addEventListener("click", function (event) {
         grassCount = 0;
       }
     }
-  } else if (x > 950 && x < 1050 && y > 50 && y < 250) {
+  } else if (x > 850 && x < 1000 && y > 200 && y < 450) {
     if (money.money > 0 && well.waterLevel == 0) {
       well.refillWell();
       money.money -= 20;
