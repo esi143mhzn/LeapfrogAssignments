@@ -9,12 +9,12 @@ class FarmFrenzy {
     constructor() {
         
         this.mainWrapper;
-        let homeSceneMenu;
-        let FarmFrenzy;
-        let imgDuckRight;
-        let imgDuckLeft;
-        let menuList;
-        let newGame;
+        this.homeSceneMenu;
+        this.farmFrenzy;
+        this.imgDuckRight;
+        this.imgDuckLeft;
+        this.menuList;
+        this.newGame;
         this.howToPlay;
 
         this.homeWidth = 1100;
@@ -25,62 +25,60 @@ class FarmFrenzy {
         this.mainWrapper = document.querySelector(".main-wrapper");
         
         //create div element for home screen
-        homeSceneMenu = document.createElement("div");
-        homeSceneMenu.classList.add("home-scene-menu");
-        homeSceneMenu.style.height = this.homeHeight + "px";
-        homeSceneMenu.style.width = this.homeWidth + "px";
-        // homeSceneMenu.style.top = 20 + "px";
-        // homeSceneMenu.style.left = 100 + "px";
-        homeSceneMenu.style.position = "absolute";
-        homeSceneMenu.style.backgroundImage = "url('src/images/background.png')";
-        this.mainWrapper.appendChild(homeSceneMenu);
+        this.homeSceneMenu = document.createElement("div");
+        this.homeSceneMenu.classList.add("home-scene-menu");
+        this.homeSceneMenu.style.height = this.homeHeight + "px";
+        this.homeSceneMenu.style.width = this.homeWidth + "px";
+        this.homeSceneMenu.style.position = "absolute";
+        this.homeSceneMenu.style.backgroundImage = "url('src/images/background.png')";
+        this.mainWrapper.appendChild(this.homeSceneMenu);
 
         //create h1 element for heading
-        FarmFrenzy = document.createElement("h1");
-        FarmFrenzy.classList.add("farm-frenzy");
-        FarmFrenzy.style.top = 170 + "px";
-        FarmFrenzy.style.left = 425 + "px";
-        FarmFrenzy.style.fontFamily = "Jokerman";
-        FarmFrenzy.style.fontSize = 50 + "px";
-        FarmFrenzy.style.fontWeight = "bold";
-        FarmFrenzy.style.color = '#FFF';
-        FarmFrenzy.style.position = "absolute";
-        FarmFrenzy.style.textShadow = "8px 8px 5px #000";
-        FarmFrenzy.innerHTML = "Farm Frenzy";
-        homeSceneMenu.appendChild(FarmFrenzy);
+        this.farmFrenzy = document.createElement("h1");
+        this.farmFrenzy.classList.add("farm-frenzy");
+        this.farmFrenzy.style.top = 170 + "px";
+        this.farmFrenzy.style.left = 425 + "px";
+        this.farmFrenzy.style.fontFamily = "Jokerman";
+        this.farmFrenzy.style.fontSize = 50 + "px";
+        this.farmFrenzy.style.fontWeight = "bold";
+        this.farmFrenzy.style.color = '#FFF';
+        this.farmFrenzy.style.position = "absolute";
+        this.farmFrenzy.style.textShadow = "8px 8px 5px #000";
+        this.farmFrenzy.innerHTML = "Farm Frenzy";
+        this.homeSceneMenu.appendChild(this.farmFrenzy);
 
         //create img element for duck image 
-        imgDuckRight = document.createElement("img");
-        imgDuckRight.setAttribute("src", "src/images/duckright1.png")
-        imgDuckRight.style.width = this.imgWidth + "px";
-        imgDuckRight.style.height = this.imgHeight + "px";
-        imgDuckRight.style.position = "absolute";
-        imgDuckRight.style.top = 170 + "px";
-        imgDuckRight.style.left = 320 + "px";
-        homeSceneMenu.appendChild(imgDuckRight);
+        this.imgDuckRight = document.createElement("img");
+        this.imgDuckRight.setAttribute("src", "src/images/duckright1.png")
+        this.imgDuckRight.style.width = this.imgWidth + "px";
+        this.imgDuckRight.style.height = this.imgHeight + "px";
+        this.imgDuckRight.style.position = "absolute";
+        this.imgDuckRight.style.top = 170 + "px";
+        this.imgDuckRight.style.left = 320 + "px";
+        this.homeSceneMenu.appendChild(this.imgDuckRight);
 
-        imgDuckLeft = document.createElement("img");
-        imgDuckLeft.setAttribute("src", "src/images/duckleft1.png");
-        imgDuckLeft.style.width = this.imgWidth + "px";
-        imgDuckLeft.style.height = this.imgHeight + "px";
-        imgDuckLeft.style.position = "absolute";
-        imgDuckLeft.style.top = 170 + "px";
-        imgDuckLeft.style.left = 740 + "px";
-        homeSceneMenu.appendChild(imgDuckLeft);
+        this.imgDuckLeft = document.createElement("img");
+        this.imgDuckLeft.setAttribute("src", "src/images/duckleft1.png");
+        this.imgDuckLeft.style.width = this.imgWidth + "px";
+        this.imgDuckLeft.style.height = this.imgHeight + "px";
+        this.imgDuckLeft.style.position = "absolute";
+        this.imgDuckLeft.style.top = 170 + "px";
+        this.imgDuckLeft.style.left = 740 + "px";
+        this.homeSceneMenu.appendChild(this.imgDuckLeft);
 
         //create menu list items
-        menuList = document.createElement("ul");
-        menuList.classList.add("menu-list");
-        homeSceneMenu.appendChild(menuList);
+        this.menuList = document.createElement("ul");
+        this.menuList.classList.add("menu-list");
+        this.homeSceneMenu.appendChild(this.menuList);
 
-        newGame = document.createElement("li");
-        newGame.setAttribute("id", "new-game");
-        newGame.innerHTML = "New Game";
-        menuList.append(newGame); 
+        this.newGame = document.createElement("li");
+        this.newGame.setAttribute("id", "new-game");
+        this.newGame.innerHTML = "New Game";
+        this.menuList.append(this.newGame); 
 
         this.howToPlay = document.createElement("li");
         this.howToPlay.setAttribute("id", "how-to-play");
         this.howToPlay.innerHTML = "How To Play";
-        menuList.append(this.howToPlay);
+        this.menuList.append(this.howToPlay);
     } 
 }

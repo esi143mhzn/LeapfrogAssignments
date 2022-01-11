@@ -15,12 +15,11 @@ class Duck {
       y: 2,
     };
 
-    this.color = "black";
+    this.duckCounter = 3;
     this.counter = 0;
   }
 
   draw() {
-    ctx.fillStyle = this.color;
     images.draw("duckleft1",
       this.position.x,
       this.position.y,

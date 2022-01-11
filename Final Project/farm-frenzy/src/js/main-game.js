@@ -14,8 +14,10 @@ document.getElementById("new-game").onclick = function() {
 }
 
 document.getElementById("how-to-play").onclick = function() {
-    mainGame.splashScreen.mainWrapper.style.display = "none";
-    mainGame.splashScreen.howToPlay.style.display = "block"
 
-    // mainGame.splashScreen.howToPlay.style.background = "url('../images/howToPlay.png')"
+    mainGame.splashScreen.homeSceneMenu.style.backgroundImage = "url('src/images/howToPlay.png')";
+    mainGame.splashScreen.menuList.style.display = "none";
+    mainGame.splashScreen.farmFrenzy.style.display = "none";
+    mainGame.splashScreen.imgDuckLeft.style.display = "none";
+    mainGame.splashScreen.imgDuckRight.style.display = "none";
 }
