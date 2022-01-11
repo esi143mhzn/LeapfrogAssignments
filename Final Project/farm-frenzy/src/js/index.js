@@ -1,7 +1,5 @@
 const canvas = document.getElementById("game-screen");
 canvas.style.display = "none";
-canvas.style.marginTop = 20 + "px";
-canvas.style.marginLeft = 92 + "px";
 
 const ctx = canvas.getContext("2d");
 

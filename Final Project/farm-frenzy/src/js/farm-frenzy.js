@@ -29,8 +29,8 @@ class FarmFrenzy {
         homeSceneMenu.classList.add("home-scene-menu");
         homeSceneMenu.style.height = this.homeHeight + "px";
         homeSceneMenu.style.width = this.homeWidth + "px";
-        homeSceneMenu.style.top = 20 + "px";
-        homeSceneMenu.style.left = 100 + "px";
+        // homeSceneMenu.style.top = 20 + "px";
+        // homeSceneMenu.style.left = 100 + "px";
         homeSceneMenu.style.position = "absolute";
         homeSceneMenu.style.backgroundImage = "url('src/images/background.png')";
         this.mainWrapper.appendChild(homeSceneMenu);
