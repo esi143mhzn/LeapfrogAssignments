@@ -1,6 +1,7 @@
 const canvas = document.getElementById("game-screen");
-canvas.style.display = "none"
-
+canvas.style.display = "none";
+canvas.style.marginTop = 20 + "px";
+canvas.style.marginLeft = 92 + "px";
 
 const ctx = canvas.getContext("2d");
 
@@ -30,16 +31,6 @@ storageImage.setAttribute("src", "src/images/shed.png");
 storageImage.style.display = "none";
 mainWrapper.appendChild(storageImage);
 
-// const eggImage = document.createElement("img");
-// eggImage.setAttribute("src", "src/images/eggs/egg1.png");
-// eggImage.style.display = "none";
-// mainWrapper.appendChild(eggImage);
-
-// const vehicleImage = document.createElement("img");
-// vehicleImage.setAttribute("src", "src/images/van/van1.png");
-// vehicleImage.style.display = "none";
-// mainWrapper.appendChild(vehicleImage);
-
 const bucketEmpty = document.createElement("img");
 bucketEmpty.setAttribute("src", "src/images/bucketEmpty.png");
 bucketEmpty.style.display = "none";
@@ -55,18 +46,6 @@ bucketFull.setAttribute("src", "src/images/bucketFull.png");
 bucketFull.style.display = "none";
 mainWrapper.appendChild(bucketFull);
 
-// const money = document.createElement("div");
-
-// const landscape = document.createElement("div");
-// landscape.innerHTML = "Money"
-// landscape.classList.add("landscape");
-// landscape.style.top = 1000 + "px"
-// landscape.style.width = 40 + "px";
-// landscape.style.height = 40 + "px";
-// landscape.style.color = "green";
-// mainWrapper.appendChild(landscape);
-
-// const wellBucket = document.createElement("div");
 let vehicle = new Vehicle();
 let wellColor = "grey";
 let well = new Well(wellColor);
@@ -75,12 +54,11 @@ let money = new Money();
 let storage = new Storage();
 
 function gameloop(timeStamp) {
+
   // Clear canvas
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
   // Draw ground area
-  // ctx.fillStyle = "#c29b25";
-  // ctx.fillRect(0, 0, 855, 405);
   ctx.drawImage(backgroundImage,0,0,GAME_WIDTH, GAME_HEIGHT);
   ctx.drawImage(groundImage, 0, 100, GAME_WIDTH - 250, GAME_HEIGHT - 240);
 
@@ -138,17 +116,18 @@ canvas.addEventListener("click", function (event) {
         grassCount = 0;
       }
     }
-  } else if (x > 850 && x < 1000 && y > 200 && y < 450) {
+  } else if ((x > 850 && x < 1000) && (y > 200 && y < 450)) {
     if (money.money > 0 && well.waterLevel == 0) {
       well.refillWell();
       money.money -= 20;
       money.update();
     }
-  } else if (x > 465 && x < 855 && y > 420 && y < 580) {
+  } else if ((x > 465 && x < 855) && (y > 420 && y < 580)) {
     vehicle.move = 1;
     vehicle.vechicleEggs = storage.eggs.length;
     storage.eggs = [];
   }
+  
   const egg = eggs.find(
     (egg) =>
       x >= egg.x &&
@@ -162,5 +141,4 @@ canvas.addEventListener("click", function (event) {
     removeElementFromArray(eggs, egg);
     storage.eggs.push(egg);
   }
-
 });
