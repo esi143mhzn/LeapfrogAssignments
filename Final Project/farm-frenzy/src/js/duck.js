@@ -1,7 +1,7 @@
 class Duck {
   constructor() {
-    this.gameWidth = 850;
-    this.gameHeight = 360;
+    this.gameWidth = 1100;
+    this.gameHeight = 600;
 
     (this.duckWidth = 50),
       (this.duckHeight = 50),
@@ -34,15 +34,15 @@ class Duck {
     this.position.y += this.speed.y;
 
     if (
-      this.position.x + this.duckWidth > this.gameWidth / 1.3 ||
-      this.position.x < 0
+      this.position.x + this.duckWidth > this.gameWidth - 350 ||
+      this.position.x < 80
     ) {
       this.speed.x = -this.speed.x;
     }
 
     if (
-      this.position.y + this.duckHeight > this.gameHeight / 1.5 ||
-      this.position.y < 0
+      this.position.y + this.duckHeight > this.gameHeight - 200 ||
+      this.position.y < 150
     ) {
       this.speed.y = -this.speed.y;
     }
