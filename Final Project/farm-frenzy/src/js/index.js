@@ -129,7 +129,7 @@ canvas.addEventListener("click", function (event) {
 
   let grass = new Grass(x, y);
 
-  if (x < 846 && y < 400) {
+  if ((x < 770 && x > 80) && (y < 430 && y > 150 )) {
     if (well.waterLevel > 0) {
       grassCount++;
       grasses.push(grass);
