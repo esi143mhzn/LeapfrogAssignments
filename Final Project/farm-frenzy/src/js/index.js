@@ -90,7 +90,7 @@ function gameloop(timeStamp) {
 }
 
 // gameloop()
-setInterval(gameloop, 50);
+
 
 function removeElementFromArray(arrayList, element) {
   const index = arrayList.indexOf(element);
@@ -135,7 +135,6 @@ canvas.addEventListener("click", function (event) {
   );
 
   if (egg && storage.eggs.length < storage.storageSpace) {
-    console.log("Egg removed!", egg);
     removeElementFromArray(eggs, egg);
     storage.eggs.push(egg);
   }
