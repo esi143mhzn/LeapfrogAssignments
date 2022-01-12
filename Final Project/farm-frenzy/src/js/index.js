@@ -12,6 +12,7 @@ let grasses = [];
 let eggs = [];
 let lastTime = 0;
 let grassCount = 0;
+let eggCounter = 0;
 
 const mainWrapper = document.querySelector(".game-wrapper");
 const backgroundImage = document.createElement("img");
@@ -29,32 +30,20 @@ storageImage.setAttribute("src", "src/images/shed.png");
 storageImage.style.display = "none";
 mainWrapper.appendChild(storageImage);
 
-const bucketEmpty = document.createElement("img");
-bucketEmpty.setAttribute("src", "src/images/bucketEmpty.png");
-bucketEmpty.style.display = "none";
-mainWrapper.appendChild(bucketEmpty);
-
-const well1 = document.createElement("img");
-well1.setAttribute("src", "src/images/well1.png");
-well1.style.display = "none";
-mainWrapper.appendChild(well1);
-
-const bucketFull = document.createElement("img");
-bucketFull.setAttribute("src", "src/images/bucketFull.png");
-bucketFull.style.display = "none";
-mainWrapper.appendChild(bucketFull);
-
 let vehicle = new Vehicle();
 let wellColor = "grey";
 let well = new Well(wellColor);
 
 let money = new Money();
 let storage = new Storage();
+let task = new Task();
 
 function gameloop(timeStamp) {
+ 
 
   // Clear canvas
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+  
 
   // Draw ground area
   ctx.drawImage(backgroundImage,0,0,GAME_WIDTH, GAME_HEIGHT);
@@ -67,6 +56,7 @@ function gameloop(timeStamp) {
   vehicle.draw();
   storage.drawStorage();
   storage.drawEggs();
+  task.draw();
 
   for (let e = 0; e < eggs.length; e++) {
     eggs[e].draw();
@@ -87,6 +77,31 @@ function gameloop(timeStamp) {
     let egg = new Egg(duck.position.x, duck.position.y);
     eggs.push(egg);
   }
+
+  timer();
+  if(mins == 0 && secs == 0){
+    gameOver();
+  }
+
+}
+function gameOver() {
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = "#000000";
+  ctx.fillStyle = "#abc";
+  roundRect(ctx, 400, 200, 100, 50, 10, true);
+  ctx.font="20px Georgia";
+  ctx.textAlign="center"; 
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = "#000000";
+  var rectHeight = 50;
+  var rectWidth = 100;
+  var rectX = 20;
+  var rectY = 10;
+  ctx.fillText("GAME OVER!", 450, 225,  rectX+(rectWidth/2),rectY+(rectHeight/2));
+//   clearInterval(gameloop())
+  duck.resetDuck();
+  duck.counter = 101;
+  isGameOver=true
 }
 
 // gameloop()
@@ -128,14 +143,19 @@ canvas.addEventListener("click", function (event) {
   
   const egg = eggs.find(
     (egg) =>
-      x >= egg.x &&
-      x <= egg.x + egg.eggSize + 5 &&
-      y >= egg.y &&
-      y <= egg.y + egg.eggSize + 5
-  );
-
-  if (egg && storage.eggs.length < storage.storageSpace) {
-    removeElementFromArray(eggs, egg);
-    storage.eggs.push(egg);
+    x >= egg.x &&
+    x <= egg.x + egg.eggSize + 5 &&
+    y >= egg.y &&
+    y <= egg.y + egg.eggSize + 5
+    );
+    
+    if (egg && storage.eggs.length < storage.storageSpace) {
+      removeElementFromArray(eggs, egg);
+      storage.eggs.push(egg);
+      eggCounter++;
   }
+
+  // const food = grass.find((grass) => grass.x);
+
+  // console.log(food)
 });
