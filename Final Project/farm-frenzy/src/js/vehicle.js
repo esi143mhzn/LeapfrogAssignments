@@ -2,7 +2,6 @@ class Vehicle {
   constructor() {
     (this.vehicleWidth = 400),
       (this.vehicleHeight = 150),
-      (this.vehicleColor = "red"),
       (this.vehicleX = 455),
       (this.vehicleY = 455),
       (this.vehicleSpeedX = 10),

@@ -1,6 +1,6 @@
 class Well {
   constructor(color) {
-    (this.x =800),
+    (this.x = 800),
       (this.y = 150),
       (this.water = "lightblue"),
       (this.color = "grey"),
@@ -21,14 +21,14 @@ class Well {
       images.draw("bucketFull", this.x + 90, this.y + 150, 100, 150);
       ctx.fillRect(
         this.x + 250,
-        this.y +100 + (5 - this.waterLevel) * this.waterLevelHeight,
+        this.y + 100 + (5 - this.waterLevel) * this.waterLevelHeight,
         20,
         this.waterLevelHeight * this.waterLevel
-        );
-        ctx.fillStyle = "grey";
-        images.draw("well1", this.x, this.y, 300, 300);
-        images.draw("bucketFull", this.x + 90, this.y + 150, 100, 150);
-      ctx.fillRect( 
+      );
+      ctx.fillStyle = "grey";
+      images.draw("well1", this.x, this.y, 300, 300);
+      images.draw("bucketFull", this.x + 90, this.y + 150, 100, 150);
+      ctx.fillRect(
         this.x + 250,
         this.y + 100,
         20,
