@@ -137,9 +137,9 @@ canvas.addEventListener("click", function (event) {
   const egg = eggs.find(
     (eggPosition) =>
     x >= eggPosition.x &&
-    x <= eggPosition.x + egg.eggSize + 5 &&
+    x <= eggPosition.x + eggPosition.eggSize + 5 &&
     y >= eggPosition.y &&
-    y <= eggPosition.y + egg.eggSize + 5
+    y <= eggPosition.y + eggPosition.eggSize + 5
     );
     
   if (egg && storage.eggs.length < storage.storageSpace) {
